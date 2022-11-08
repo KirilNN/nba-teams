@@ -1,13 +1,13 @@
 import React, { FunctionComponent, PropsWithChildren, ReactElement } from 'react';
 import { Formik, Form, FormikProps, Field } from 'formik';
 import { FormGroup, FormControl, Button, Typography } from '@material-ui/core';
-import styles from './index.module.scss';
-import { importActions } from '../../import.actions';
+import styles from './styles/import.module.scss';
+import { importActions } from './import.actions';
 import { connect } from 'react-redux';
-import { IFormValues, IImportProps } from '../../import.interfaces';
-import { AppState } from '../../../../shared/store';
+import { IFormValues, IImportProps } from './import.interfaces';
+import { AppState } from '../../shared/store';
 import clsx from 'clsx';
-import { validationSchema } from '../../utils/validation.schema';
+import { validationSchema } from './utils/validation.schema';
 import { useHistory } from 'react-router-dom';
 
 type OwnProps = IImportProps & ReturnType<typeof mapStateToProps>;

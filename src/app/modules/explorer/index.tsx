@@ -1,13 +1,13 @@
 import React, { FunctionComponent, PropsWithChildren, ReactElement } from 'react';
-import { explorerActions } from '../../explorer.actions';
+import { explorerActions } from './explorer.actions';
 import { connect } from 'react-redux';
-import { IExplorerProps } from '../../explorer.interfaces';
-import { AppState } from '../../../../shared/store';
+import { IExplorerProps } from './explorer.interfaces';
+import { AppState } from '../../shared/store';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import Multiselect from '../../components/multiselect';
-import VenueRadioSelect from '../../components/radio';
-import { reduceTeamData } from '../../utils/explorer.helper';
+import Multiselect from './components/multiselect';
+import VenueRadioSelect from './components/radio';
+import { reduceTeamData } from './utils/explorer.helper';
 
 type OwnProps = IExplorerProps & ReturnType<typeof mapStateToProps>;
 
